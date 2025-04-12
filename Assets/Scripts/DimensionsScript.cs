@@ -4,32 +4,31 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public GameObject floor;
+    public List<GameObject> invertedObjects;
 
-    public float currentTime;
+   public float currentTime;
 
     public float timeToLive;
 
-    public SpriteRenderer pallette;
+    public float Th;
+
+    
+
+   
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach(GameObject go in invertedObjects)
+        {
+           go.GetComponent<SpriteRenderer>().material.GetFloat("_Threshold" );
+        }
+         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(GameManager.Instance.swapped == true)
-        {
-            pallette.color = new Color(0f, 0f, 0f, 1f);
-            Debug.Log("Fart");
-        }
-        else
-        {
-            pallette.color = new Color(1f, 1f, 1f, 1f);
-            currentTime = 0.0f;
-        }
+       Inversion();
 
         if(GameManager.Instance.isSwapped == true)
         {
@@ -40,6 +39,31 @@ public class NewBehaviourScript : MonoBehaviour
             GameManager.Instance.swapped = false;
             GameManager.Instance.isSwapped = false;
             currentTime = 0.0f;
+        }
+    }
+
+    public void Inversion()
+    {
+        foreach(GameObject go in invertedObjects){
+        if(GameManager.Instance.swapped == true)
+        {
+            go.GetComponent<SpriteRenderer>().material.SetFloat("_Threshold", Th + 1.0f);
+       
+            if (go.CompareTag("GetRid"))
+            {
+                go.SetActive(false);
+            }
+        }
+        else
+        {
+            go.GetComponent<SpriteRenderer>().material.SetFloat("_Threshold", Th = 0.0f);
+            currentTime = 0.0f;
+
+             if (go.CompareTag("GetRid"))
+            {
+                go.SetActive(true);
+            }
+        }
         }
     }
 }
