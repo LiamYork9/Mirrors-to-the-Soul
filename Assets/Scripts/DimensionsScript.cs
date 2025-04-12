@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class DimensionsScript : MonoBehaviour
 {
     public List<GameObject> invertedObjects;
 
@@ -77,6 +77,9 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 go.GetComponent<BoxCollider2D>().enabled = false;
             }
+            if(go == null){
+                return;
+            }
         }
         else
         {
@@ -86,6 +89,9 @@ public class NewBehaviourScript : MonoBehaviour
              if (go.CompareTag("GetRid"))
             {
                  go.GetComponent<BoxCollider2D>().enabled = true;
+            }
+            if(go == null){
+                return;
             }
         }
         }
