@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38546cf187bedd84b91a2c509e9ab1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 360
+  dead_zone: 0
 --- !u!1 &995658126
 GameObject:
   m_ObjectHideFlags: 0
