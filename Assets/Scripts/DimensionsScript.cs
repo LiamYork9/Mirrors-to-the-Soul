@@ -10,11 +10,15 @@ public class NewBehaviourScript : MonoBehaviour
 
     public float timeToLive;
 
+    public float Th;
+
+    
+
     public SpriteRenderer pallette;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Th =  floor.GetComponent<SpriteRenderer>().material.GetFloat("_Threshold" );
     }
 
     // Update is called once per frame
@@ -22,7 +26,8 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if(GameManager.Instance.swapped == true)
         {
-            pallette.color = new Color(0f, 0f, 0f, 1f);
+          Th = 1.0f;
+       
             Debug.Log("Fart");
         }
         else
