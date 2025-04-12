@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floor: {fileID: 916373444}
   currentTime: 0
+  timeToLive: 5
   pallette: {fileID: 916373445}
 --- !u!1 &916373444
 GameObject:

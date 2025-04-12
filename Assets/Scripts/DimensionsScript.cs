@@ -8,6 +8,8 @@ public class NewBehaviourScript : MonoBehaviour
 
     public float currentTime;
 
+    public float timeToLive;
+
     public SpriteRenderer pallette;
     // Start is called before the first frame update
     void Start()
@@ -26,13 +28,14 @@ public class NewBehaviourScript : MonoBehaviour
         else
         {
             pallette.color = new Color(1f, 1f, 1f, 1f);
+            currentTime = 0.0f;
         }
 
         if(GameManager.Instance.isSwapped == true)
         {
             currentTime  += Time.deltaTime;
         }
-        if(currentTime >= 5.0f)
+        if(currentTime >= timeToLive)
         {
             GameManager.Instance.swapped = false;
             GameManager.Instance.isSwapped = false;
