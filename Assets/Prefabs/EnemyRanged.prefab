@@ -197,8 +197,8 @@ MonoBehaviour:
   speed: 3
   rotateSpeed: 0.0025
   bulletPrefab: {fileID: 5140002582761046885, guid: 599a8522a17eeee4fb37c4b970042461, type: 3}
-  distanceToShoot: 5
-  distanceToStop: 3
-  fireRate: 0
-  timeToFire: 0
+  distanceToShoot: 8
+  distanceToStop: 5
+  fireRate: 5
+  timeToFire: 0.5
   firingPoint: {fileID: 0}

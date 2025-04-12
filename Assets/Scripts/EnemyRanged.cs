@@ -49,11 +49,22 @@ public class EnemyRanged : MonoBehaviour
             timeToFire -= Time.deltaTime;
         }
     }
-
+    
     private void FixedUpdate()
     {
-        rb.velocity = transform.up * speed;
+        if (target != null)
+        {
+            if (Vector2.Distance(target.position, transform.position) >= distanceToStop)
+            {
+                rb.velocity = transform.up * speed;
+            }
+            else
+            {
+                rb.velocity = Vector2.zero;
+            }
+        }
     }
+        
 
     private void RotateTowardsTarget()
     {
