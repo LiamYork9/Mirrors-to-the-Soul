@@ -8,6 +8,7 @@ public class BookController : MonoBehaviour
 {
     public float dead_zone;
     public GameObject spellPrefab;
+    public Transform spawnPt;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +55,7 @@ public class BookController : MonoBehaviour
         if (input.Shoot.WasPressedThisFrame())
         {
             var spell = Instantiate(spellPrefab);
-            spell.transform.position += new Vector3(x_movement, y_movement, 0);
+            spell.transform.position = spawnPt.position;
             spell.transform.rotation = Quaternion.Euler(0, 0, 360 - angle);
         }
     }

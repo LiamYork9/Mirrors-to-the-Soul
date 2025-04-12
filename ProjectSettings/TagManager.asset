@@ -10,6 +10,7 @@ TagManager:
   - Obstacle
   - Moveable
   - Enemy
+  - ScreenBounds
   layers:
   - Default
   - TransparentFX
