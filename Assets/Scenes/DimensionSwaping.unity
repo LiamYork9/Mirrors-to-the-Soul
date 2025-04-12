@@ -194,26 +194,6 @@ MonoBehaviour:
   mana: {fileID: 421197922}
   barLength: 0
   reflected: {fileID: 727728371}
---- !u!1 &225946496 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8256601307954200289, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
-  m_PrefabInstance: {fileID: 1484328547}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &225946501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225946496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0bb5ec3fe385ef4f9a53cb824d4a8c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  healthBar: {fileID: 1235179230}
 --- !u!114 &421197922 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1847504430304414515, guid: 71214bbb37e771149b2342979727f90f, type: 3}
@@ -926,6 +906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7750300669163015794, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1235179230}
     - target: {fileID: 8207516990169793491, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
       propertyPath: healthBar
       value: 
@@ -933,14 +917,6 @@ PrefabInstance:
     - target: {fileID: 8207516990169793491, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595926316314080079, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
-      propertyPath: m_LinearDrag
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595926316314080079, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
-      propertyPath: m_AngularDrag
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8926929289750742745, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -985,10 +961,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8256601307954200289, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 225946501}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
 --- !u!1 &1630237124
 GameObject:
