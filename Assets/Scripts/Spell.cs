@@ -16,8 +16,17 @@ public class spell : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var angle = spellTForm.up;
         var spellRot = spellTForm.rotation;
-        var spellDirection = spellRot * spellTForm.forward;
+        var spellDirection = spellRot * angle;
         rb.transform.Translate(spellDirection * 10f * Time.deltaTime);
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("ScreenBounds"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
