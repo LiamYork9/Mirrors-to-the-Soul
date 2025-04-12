@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 public class BookController : MonoBehaviour
 {
     public float dead_zone;
-    public GameObject spellPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +20,6 @@ public class BookController : MonoBehaviour
         var input = Game.Input.Controls;
         float x_movement = 0.0f;
         float y_movement = 0.0f;
-
         
         x_movement = input.AimBookX.ReadValue<float>();
         y_movement = input.AimBookY.ReadValue<float>();
@@ -49,13 +47,6 @@ public class BookController : MonoBehaviour
         if((x_movement != 0) || (y_movement != 0))
         {
             transform.rotation = Quaternion.Euler(0, 0, 360-angle);
-        }
-
-        if (input.Shoot.WasPressedThisFrame())
-        {
-            var spell = Instantiate(spellPrefab);
-            spell.transform.position += new Vector3(x_movement, y_movement, 0);
-            spell.transform.rotation = Quaternion.Euler(0, 0, 360 - angle);
         }
     }
 }
