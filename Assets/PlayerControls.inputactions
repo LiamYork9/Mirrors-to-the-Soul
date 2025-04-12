@@ -103,6 +103,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DamagePlayer",
+                    "type": "Button",
+                    "id": "e4627212-7c3c-4a9b-b647-30c303f35b3d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -274,11 +283,22 @@
                 {
                     "name": "",
                     "id": "c574fba3-1a80-42fc-94fe-baa846fa9b32",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0adf8334-6568-422d-bbf9-b1d354d6e58f",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DamagePlayer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

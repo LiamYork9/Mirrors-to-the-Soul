@@ -17,4 +17,10 @@ public class ManaBar : MonoBehaviour
     {
         slider.value = mana;
     }
+
+    public void AddMana()
+    {
+        SetMana((int)slider.value + 20);
+    }
 }
+

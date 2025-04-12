@@ -14,6 +14,8 @@ public class NewBehaviourScript : MonoBehaviour
 
     public TimerBar timer;
 
+    public ManaBar mana;
+
     public float barLength;
 
     public GameObject reflected;
@@ -43,6 +45,7 @@ public class NewBehaviourScript : MonoBehaviour
             currentTime  += Time.deltaTime;
             barLength -= Time.deltaTime;
             timer.SetTimer(barLength);
+            mana.AddMana();
         }
         if(currentTime >= timeToLive)
         {

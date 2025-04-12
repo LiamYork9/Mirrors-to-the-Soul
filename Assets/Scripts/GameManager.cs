@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class GameManager : MonoBehaviour
     public bool swapped = false;
 
     public bool isSwapped = false;
+
+    PlayerControls gamepad;
     public static GameManager Instance { get; private set; } = null;
     private void Awake()
     {
@@ -20,32 +24,22 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+   
+    
+
     }
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if((Input.GetKeyDown(KeyCode.LeftShift)) || (Input.GetKeyDown(KeyCode.JoystickButton4)))
         {
-            if(isSwapped)
-            {
-                Back();
-            }
-            else
-            {
-                Swap();
-            }
+            Swap();
         }
        
     }
 
     public void Swap()
     {
-        swapped = true;
-        isSwapped = true;
-    }
-
-    public void Back()
-    {
-        swapped = false;
-        isSwapped = false;
+        swapped = !swapped;
+        isSwapped = !isSwapped;
     }
 }
