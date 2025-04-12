@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    public bool swapped = false;
+
+    public bool isSwapped = false;
     public static GameManager Instance { get; private set; } = null;
     private void Awake()
     {
@@ -16,5 +20,32 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            if(isSwapped)
+            {
+                Back();
+            }
+            else
+            {
+                Swap();
+            }
+        }
+       
+    }
+
+    public void Swap()
+    {
+        swapped = true;
+        isSwapped = true;
+    }
+
+    public void Back()
+    {
+        swapped = false;
+        isSwapped = false;
     }
 }
