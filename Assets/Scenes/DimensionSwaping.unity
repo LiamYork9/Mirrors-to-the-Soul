@@ -428,17 +428,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &956030595 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1847504430304414515, guid: 71214bbb37e771149b2342979727f90f, type: 3}
-  m_PrefabInstance: {fileID: 727728370}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d3e7fa9aa4d3624d878b37433ba1b52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1235179230 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2074364074212201815, guid: 71214bbb37e771149b2342979727f90f, type: 3}
@@ -736,7 +725,7 @@ PrefabInstance:
     - target: {fileID: 1872698341208357311, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
       propertyPath: manaBar
       value: 
-      objectReference: {fileID: 956030595}
+      objectReference: {fileID: 421197922}
     - target: {fileID: 3010469059162150373, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
       propertyPath: m_Name
       value: Player

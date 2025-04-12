@@ -45,7 +45,7 @@ public class NewBehaviourScript : MonoBehaviour
             currentTime  += Time.deltaTime;
             barLength -= Time.deltaTime;
             timer.SetTimer(barLength);
-            mana.SetMana((int)currentTime);
+            mana.AddMana();
         }
         if(currentTime >= timeToLive)
         {
