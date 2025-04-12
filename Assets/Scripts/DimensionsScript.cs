@@ -51,7 +51,7 @@ public class NewBehaviourScript : MonoBehaviour
        
             if (go.CompareTag("GetRid"))
             {
-                go.SetActive(false);
+                go.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
         else
@@ -61,7 +61,7 @@ public class NewBehaviourScript : MonoBehaviour
 
              if (go.CompareTag("GetRid"))
             {
-                go.SetActive(true);
+                 go.GetComponent<BoxCollider2D>().enabled = true;
             }
         }
         }
