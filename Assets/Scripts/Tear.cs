@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Tear : MonoBehaviour
 {
     [Range(1, 10)]
     [SerializeField] private float speed = 10f;
@@ -10,17 +10,16 @@ public class Bullet : MonoBehaviour
     [Range(1, 10)]
     [SerializeField] private float lifeTime = 3f;
 
-    private Rigidbody2D rb; 
+    private Rigidbody rb; 
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, lifeTime);
+        rb = GetComponent<Rigidbody>();
+        Destroy(gameObject, lifeTime); 
     }
 
     void FixedUpdate()
     {
         rb.velocity = transform.up * speed; 
     }
- 
 }
