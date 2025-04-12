@@ -27,6 +27,11 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.down * move_speed * input.MoveDown.ReadValue<float>() * Time.deltaTime);
         transform.Translate(Vector3.right * move_speed * input.MoveRight.ReadValue<float>() * Time.deltaTime);
         transform.Translate(Vector3.left * move_speed * input.MoveLeft.ReadValue<float>() * Time.deltaTime);
+
+        if (input.DamagePlayer.WasPressedThisFrame())
+        {
+            TakeDamage(10);
+        }
     }
 
     void TakeDamage(int damage)
