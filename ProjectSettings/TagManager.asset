@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GetRid
+  tags:
+  - Spell
+  - Obstacle
+  - Moveable
+  - Enemy
+  - ScreenBounds
   layers:
   - Default
   - TransparentFX

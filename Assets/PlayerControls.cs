@@ -116,6 +116,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""6d138e68-26d3-4e9e-805c-95a730021a69"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -272,6 +281,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""AimBookLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""89ae9260-e915-422c-9630-385b81bd1bd7"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c574fba3-1a80-42fc-94fe-baa846fa9b32"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -290,6 +321,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Controls_AimBookDown = m_Controls.FindAction("AimBookDown", throwIfNotFound: true);
         m_Controls_AimBookRight = m_Controls.FindAction("AimBookRight", throwIfNotFound: true);
         m_Controls_AimBookLeft = m_Controls.FindAction("AimBookLeft", throwIfNotFound: true);
+        m_Controls_Shoot = m_Controls.FindAction("Shoot", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -366,6 +398,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_AimBookDown;
     private readonly InputAction m_Controls_AimBookRight;
     private readonly InputAction m_Controls_AimBookLeft;
+    private readonly InputAction m_Controls_Shoot;
     public struct ControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -380,6 +413,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @AimBookDown => m_Wrapper.m_Controls_AimBookDown;
         public InputAction @AimBookRight => m_Wrapper.m_Controls_AimBookRight;
         public InputAction @AimBookLeft => m_Wrapper.m_Controls_AimBookLeft;
+        public InputAction @Shoot => m_Wrapper.m_Controls_Shoot;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -419,6 +453,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @AimBookLeft.started += instance.OnAimBookLeft;
             @AimBookLeft.performed += instance.OnAimBookLeft;
             @AimBookLeft.canceled += instance.OnAimBookLeft;
+            @Shoot.started += instance.OnShoot;
+            @Shoot.performed += instance.OnShoot;
+            @Shoot.canceled += instance.OnShoot;
         }
 
         private void UnregisterCallbacks(IControlsActions instance)
@@ -453,6 +490,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @AimBookLeft.started -= instance.OnAimBookLeft;
             @AimBookLeft.performed -= instance.OnAimBookLeft;
             @AimBookLeft.canceled -= instance.OnAimBookLeft;
+            @Shoot.started -= instance.OnShoot;
+            @Shoot.performed -= instance.OnShoot;
+            @Shoot.canceled -= instance.OnShoot;
         }
 
         public void RemoveCallbacks(IControlsActions instance)
@@ -482,5 +522,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnAimBookDown(InputAction.CallbackContext context);
         void OnAimBookRight(InputAction.CallbackContext context);
         void OnAimBookLeft(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
     }
 }
