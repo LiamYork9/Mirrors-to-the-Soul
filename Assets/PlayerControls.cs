@@ -64,7 +64,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""AimBookUp"",
+                    ""name"": ""AimBookY"",
                     ""type"": ""Value"",
                     ""id"": ""53cd11ce-6c24-48f8-a214-d2f9d6a10427"",
                     ""expectedControlType"": ""Axis"",
@@ -73,16 +73,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""AimBookDown"",
-                    ""type"": ""Value"",
-                    ""id"": ""a482925d-dcfe-4c2b-b3fa-6f87093f7d7f"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""AimBookRight"",
+                    ""name"": ""AimBookX"",
                     ""type"": ""Value"",
                     ""id"": ""3a3c5bd2-af7f-4958-91bc-190976d912c7"",
                     ""expectedControlType"": ""Axis"",
@@ -91,13 +82,40 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""AimBookLeft"",
-                    ""type"": ""Value"",
-                    ""id"": ""efa7990d-7925-4b74-8f3d-07f88618a1fe"",
-                    ""expectedControlType"": ""Axis"",
+                    ""name"": ""AimBookUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""21bbd526-1a83-4572-a10b-26671bfbc217"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AimBookDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""da79e5b5-3c82-4643-8c96-2e7231f290ec"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AimBookRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""93e1284c-3400-4929-8d40-8f936465ee32"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AimBookLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""c44d5c50-557a-4d69-a4f0-30bb2eb50d27"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -196,40 +214,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AimBookUp"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7c5ae34d-5f22-4306-ab9f-2e76d8587e54"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AimBookUp"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c2c5863c-cf31-4793-903b-7d9203e23891"",
-                    ""path"": ""<Gamepad>/rightStick/y"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AimBookDown"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""eaef3138-b038-4bf4-9c46-4be0a33e180c"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AimBookDown"",
+                    ""action"": ""AimBookY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -240,13 +225,35 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AimBookRight"",
+                    ""action"": ""AimBookX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b39db712-38b8-425a-ae2b-4d620b2378d8"",
+                    ""id"": ""584eac53-bbcd-40b9-8054-72af3f52b0b7"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimBookUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0c166b36-aa94-4a01-81f1-cb1b0b136d56"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimBookDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2cc27565-1b17-433d-9335-07009180a908"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -257,18 +264,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c2e2c11f-0d33-4f8c-996c-ab5f2698a13e"",
-                    ""path"": ""<Gamepad>/rightStick/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AimBookLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f8245c74-d566-45a7-82ec-03c573685012"",
+                    ""id"": ""c1c2fe67-b345-4874-bc99-fcb0c27ae1b2"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -288,6 +284,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Controls_MoveDown = m_Controls.FindAction("MoveDown", throwIfNotFound: true);
         m_Controls_MoveRight = m_Controls.FindAction("MoveRight", throwIfNotFound: true);
         m_Controls_MoveLeft = m_Controls.FindAction("MoveLeft", throwIfNotFound: true);
+        m_Controls_AimBookY = m_Controls.FindAction("AimBookY", throwIfNotFound: true);
+        m_Controls_AimBookX = m_Controls.FindAction("AimBookX", throwIfNotFound: true);
         m_Controls_AimBookUp = m_Controls.FindAction("AimBookUp", throwIfNotFound: true);
         m_Controls_AimBookDown = m_Controls.FindAction("AimBookDown", throwIfNotFound: true);
         m_Controls_AimBookRight = m_Controls.FindAction("AimBookRight", throwIfNotFound: true);
@@ -362,6 +360,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_MoveDown;
     private readonly InputAction m_Controls_MoveRight;
     private readonly InputAction m_Controls_MoveLeft;
+    private readonly InputAction m_Controls_AimBookY;
+    private readonly InputAction m_Controls_AimBookX;
     private readonly InputAction m_Controls_AimBookUp;
     private readonly InputAction m_Controls_AimBookDown;
     private readonly InputAction m_Controls_AimBookRight;
@@ -374,6 +374,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @MoveDown => m_Wrapper.m_Controls_MoveDown;
         public InputAction @MoveRight => m_Wrapper.m_Controls_MoveRight;
         public InputAction @MoveLeft => m_Wrapper.m_Controls_MoveLeft;
+        public InputAction @AimBookY => m_Wrapper.m_Controls_AimBookY;
+        public InputAction @AimBookX => m_Wrapper.m_Controls_AimBookX;
         public InputAction @AimBookUp => m_Wrapper.m_Controls_AimBookUp;
         public InputAction @AimBookDown => m_Wrapper.m_Controls_AimBookDown;
         public InputAction @AimBookRight => m_Wrapper.m_Controls_AimBookRight;
@@ -399,6 +401,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @MoveLeft.started += instance.OnMoveLeft;
             @MoveLeft.performed += instance.OnMoveLeft;
             @MoveLeft.canceled += instance.OnMoveLeft;
+            @AimBookY.started += instance.OnAimBookY;
+            @AimBookY.performed += instance.OnAimBookY;
+            @AimBookY.canceled += instance.OnAimBookY;
+            @AimBookX.started += instance.OnAimBookX;
+            @AimBookX.performed += instance.OnAimBookX;
+            @AimBookX.canceled += instance.OnAimBookX;
             @AimBookUp.started += instance.OnAimBookUp;
             @AimBookUp.performed += instance.OnAimBookUp;
             @AimBookUp.canceled += instance.OnAimBookUp;
@@ -427,6 +435,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @MoveLeft.started -= instance.OnMoveLeft;
             @MoveLeft.performed -= instance.OnMoveLeft;
             @MoveLeft.canceled -= instance.OnMoveLeft;
+            @AimBookY.started -= instance.OnAimBookY;
+            @AimBookY.performed -= instance.OnAimBookY;
+            @AimBookY.canceled -= instance.OnAimBookY;
+            @AimBookX.started -= instance.OnAimBookX;
+            @AimBookX.performed -= instance.OnAimBookX;
+            @AimBookX.canceled -= instance.OnAimBookX;
             @AimBookUp.started -= instance.OnAimBookUp;
             @AimBookUp.performed -= instance.OnAimBookUp;
             @AimBookUp.canceled -= instance.OnAimBookUp;
@@ -462,6 +476,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnMoveDown(InputAction.CallbackContext context);
         void OnMoveRight(InputAction.CallbackContext context);
         void OnMoveLeft(InputAction.CallbackContext context);
+        void OnAimBookY(InputAction.CallbackContext context);
+        void OnAimBookX(InputAction.CallbackContext context);
         void OnAimBookUp(InputAction.CallbackContext context);
         void OnAimBookDown(InputAction.CallbackContext context);
         void OnAimBookRight(InputAction.CallbackContext context);
