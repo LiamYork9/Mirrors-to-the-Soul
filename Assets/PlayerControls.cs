@@ -125,6 +125,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DamagePlayer"",
+                    ""type"": ""Button"",
+                    ""id"": ""e4627212-7c3c-4a9b-b647-30c303f35b3d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -303,6 +312,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0adf8334-6568-422d-bbf9-b1d354d6e58f"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DamagePlayer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -322,6 +342,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Controls_AimBookRight = m_Controls.FindAction("AimBookRight", throwIfNotFound: true);
         m_Controls_AimBookLeft = m_Controls.FindAction("AimBookLeft", throwIfNotFound: true);
         m_Controls_Shoot = m_Controls.FindAction("Shoot", throwIfNotFound: true);
+        m_Controls_DamagePlayer = m_Controls.FindAction("DamagePlayer", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -399,6 +420,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_AimBookRight;
     private readonly InputAction m_Controls_AimBookLeft;
     private readonly InputAction m_Controls_Shoot;
+    private readonly InputAction m_Controls_DamagePlayer;
     public struct ControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -414,6 +436,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @AimBookRight => m_Wrapper.m_Controls_AimBookRight;
         public InputAction @AimBookLeft => m_Wrapper.m_Controls_AimBookLeft;
         public InputAction @Shoot => m_Wrapper.m_Controls_Shoot;
+        public InputAction @DamagePlayer => m_Wrapper.m_Controls_DamagePlayer;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -456,6 +479,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Shoot.started += instance.OnShoot;
             @Shoot.performed += instance.OnShoot;
             @Shoot.canceled += instance.OnShoot;
+            @DamagePlayer.started += instance.OnDamagePlayer;
+            @DamagePlayer.performed += instance.OnDamagePlayer;
+            @DamagePlayer.canceled += instance.OnDamagePlayer;
         }
 
         private void UnregisterCallbacks(IControlsActions instance)
@@ -493,6 +519,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Shoot.started -= instance.OnShoot;
             @Shoot.performed -= instance.OnShoot;
             @Shoot.canceled -= instance.OnShoot;
+            @DamagePlayer.started -= instance.OnDamagePlayer;
+            @DamagePlayer.performed -= instance.OnDamagePlayer;
+            @DamagePlayer.canceled -= instance.OnDamagePlayer;
         }
 
         public void RemoveCallbacks(IControlsActions instance)
@@ -523,5 +552,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnAimBookRight(InputAction.CallbackContext context);
         void OnAimBookLeft(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
+        void OnDamagePlayer(InputAction.CallbackContext context);
     }
 }
