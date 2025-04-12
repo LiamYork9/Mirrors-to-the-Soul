@@ -52,6 +52,12 @@ public class NewBehaviourScript : MonoBehaviour
             currentTime = 0.0f;
             barLength = timeToLive;
         }
+        if(GameManager.Instance.isSwapped == false)
+        {
+             reflected.SetActive(false);
+             barLength = timeToLive;
+
+        }
     }
 
     public void Inversion()
