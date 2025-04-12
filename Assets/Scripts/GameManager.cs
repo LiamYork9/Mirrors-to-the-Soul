@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class GameManager : MonoBehaviour
 {
 
@@ -30,46 +31,16 @@ public class GameManager : MonoBehaviour
     }
     public void Update()
     {
-        var input = Game.Input.Controls;
-
-        var x_component = input.Shifting.ReadValue<float>();
-        Debug.Log("Shift" + x_component);
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if((Input.GetKeyDown(KeyCode.LeftShift)) || (Input.GetKeyDown(KeyCode.JoystickButton4)))
         {
-            if(isSwapped)
-            {
-                Back();
-            }
-            else
-            {
-                Swap();
-            }
+            Swap();
         }
        
     }
 
     public void Swap()
     {
-        swapped = true;
-        isSwapped = true;
-    }
-
-    public void Back()
-    {
-        swapped = false;
-        isSwapped = false;
-    }
-
-    public void Swapped()
-    {
-        if(isSwapped)
-            {
-                Back();
-            }
-            else
-            {
-                Swap();
-            }
-            Debug.Log("fart");
+        swapped = !swapped;
+        isSwapped = !isSwapped;
     }
 }
