@@ -8,6 +8,13 @@ public class EnemyRanged : MonoBehaviour
     public float speed = 3f;
     public float rotateSpeed = 0.0025f;
     private Rigidbody2D rb;
+    public GameObject bulletPrefab;
+
+    public float distanceToShoot = 5f;
+    public float distanceToStop = 3f;
+    public float fireRate;
+    public float timeToFire = 0f;
+    public Transform firingPoint; 
 
     void Start()
     {
@@ -23,6 +30,23 @@ public class EnemyRanged : MonoBehaviour
         else
         {
             RotateTowardsTarget();
+        }
+
+        if (Vector2.Distance(target.position, transform.position) <= distanceToShoot)
+        {
+            Shoot(); 
+        }
+    }
+
+    private void Shoot()
+    {
+        if (timeToFire <= 0f)
+        {
+            Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
+            timeToFire = fireRate; 
+        } else
+        {
+            timeToFire -= Time.deltaTime;
         }
     }
 
