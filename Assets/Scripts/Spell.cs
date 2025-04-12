@@ -19,7 +19,7 @@ public class spell : MonoBehaviour
         var angle = spellTForm.up;
         var spellRot = spellTForm.rotation;
         var spellDirection = spellRot * angle;
-        rb.transform.Translate(spellDirection * 10f * Time.deltaTime);
+        rb.transform.Translate(spellDirection * 15f * Time.deltaTime);
     }
 
     void OnTriggerExit2D(Collider2D collision)
