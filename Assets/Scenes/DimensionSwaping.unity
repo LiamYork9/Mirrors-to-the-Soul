@@ -181,9 +181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e7dc433219e3f4293bbbf02117c884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invertedObjects:
+  - {fileID: 916373444}
+  - {fileID: 1284313156}
   floor: {fileID: 916373444}
   currentTime: 0
   timeToLive: 5
+  Th: 0
   pallette: {fileID: 916373445}
 --- !u!1 &916373444
 GameObject:
@@ -244,7 +248,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.12036313, g: 0.12039505, b: 1, a: 1}
+  m_Color: {r: 0.99433964, g: 0.99433964, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -306,7 +310,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 77d314a2c7656c34d9fe87d1882187c9, type: 2}
+  - {fileID: 2100000, guid: cbfc2b738842c3241820a6f1d7e3f6ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -326,9 +330,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.17931636, g: 0.24451956, b: 0.82641506, a: 1}
+  m_Color: {r: 0.7132075, g: 0.07366462, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -347,7 +351,7 @@ Transform:
   m_GameObject: {fileID: 1284313156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.646782, y: 16.408726, z: 0}
+  m_LocalPosition: {x: -0.5, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

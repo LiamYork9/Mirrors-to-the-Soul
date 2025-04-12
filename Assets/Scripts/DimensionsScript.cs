@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    public List<GameObject> invertedObjects;
+
     public GameObject floor;
 
     public float currentTime;
@@ -18,22 +20,28 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Th =  floor.GetComponent<SpriteRenderer>().material.GetFloat("_Threshold" );
+        foreach(GameObject go in invertedObjects)
+        {
+           go.GetComponent<SpriteRenderer>().material.GetFloat("_Threshold" );
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        foreach(GameObject go in invertedObjects){
         if(GameManager.Instance.swapped == true)
         {
-          Th = 1.0f;
+            go.GetComponent<SpriteRenderer>().material.SetFloat("_Threshold", Th + 1.0f);
        
             Debug.Log("Fart");
         }
         else
         {
-            pallette.color = new Color(1f, 1f, 1f, 1f);
+            go.GetComponent<SpriteRenderer>().material.SetFloat("_Threshold", Th = 0.0f);
             currentTime = 0.0f;
+        }
         }
 
         if(GameManager.Instance.isSwapped == true)
