@@ -12,6 +12,12 @@ public class NewBehaviourScript : MonoBehaviour
 
     public float Th;
 
+    public TimerBar timer;
+
+    public float barLength;
+
+    public GameObject reflected;
+
     
 
    
@@ -22,7 +28,8 @@ public class NewBehaviourScript : MonoBehaviour
         {
            go.GetComponent<SpriteRenderer>().material.GetFloat("_Threshold" );
         }
-         
+        timer.SetMaxTimer(timeToLive);
+        barLength = timeToLive;
     }
 
     // Update is called once per frame
@@ -32,12 +39,16 @@ public class NewBehaviourScript : MonoBehaviour
 
         if(GameManager.Instance.isSwapped == true)
         {
+            reflected.SetActive(true);
             currentTime  += Time.deltaTime;
+            barLength -= Time.deltaTime;
+            timer.SetTimer(barLength);
         }
         if(currentTime >= timeToLive)
         {
             GameManager.Instance.swapped = false;
             GameManager.Instance.isSwapped = false;
+            reflected.SetActive(false);
             currentTime = 0.0f;
         }
     }

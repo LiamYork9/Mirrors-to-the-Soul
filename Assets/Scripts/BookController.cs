@@ -13,12 +13,17 @@ public class BookController : MonoBehaviour
     private float y_component;
     private float prev_x = 0.0f;
     private float prev_y = 0.0f;
+    public int maxMana = 100;
+    public int currentMana;
+    public ManaBar manaBar;
 
     // Start is called before the first frame update
     void Start()
     {
-        x_movement = 0.0f;
-        y_movement = 0.0f;
+        x_component = 0.0f;
+        y_component = 0.0f;
+        currentMana = maxMana;
+        manaBar.SetMaxMana(maxMana);
     }
 
     // Update is called once per frame
@@ -64,6 +69,13 @@ public class BookController : MonoBehaviour
             var spell = Instantiate(spellPrefab);
             spell.transform.position = spawnPt.position;
             spell.transform.rotation = Quaternion.Euler(0, 0, 360 - angle);
+            UseMana(10);
         }
+    }
+
+    void UseMana(int UsedMana)
+    {
+        currentMana -= UsedMana;
+        manaBar.SetMana(currentMana);
     }
 }
