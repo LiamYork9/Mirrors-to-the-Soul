@@ -20,7 +20,7 @@ public class ManaBar : MonoBehaviour
 
     public void AddMana()
     {
-        SetMana((int)slider.value + 10);
+        SetMana((int)slider.value + 20);
     }
 }
 
