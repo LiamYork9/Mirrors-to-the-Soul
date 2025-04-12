@@ -146,6 +146,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1456148814}
+    - target: {fileID: 8256601307954200289, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8926929289750742745, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -635,6 +639,7 @@ GameObject:
   - component: {fileID: 2055344272}
   - component: {fileID: 2055344271}
   - component: {fileID: 2055344274}
+  - component: {fileID: 2055344275}
   m_Layer: 0
   m_Name: Boss_Debug
   m_TagString: Boss
@@ -788,6 +793,19 @@ PolygonCollider2D:
       - {x: 0.29296875, y: 0.40234375}
       - {x: 0.15234375, y: 0.47265625}
   m_UseDelaunayMesh: 0
+--- !u!114 &2055344275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055344270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ad217eed47d0c45ae2c23138928958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 5
 --- !u!1 &2062281417
 GameObject:
   m_ObjectHideFlags: 0

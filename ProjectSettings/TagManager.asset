@@ -8,6 +8,7 @@ TagManager:
   - ScreenBounds
   - Spell
   - Boss
+  - Transition
   layers:
   - Default
   - TransparentFX
