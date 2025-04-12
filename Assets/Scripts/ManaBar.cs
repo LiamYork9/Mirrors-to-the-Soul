@@ -20,7 +20,7 @@ public class ManaBar : MonoBehaviour
 
     public int GetMana()
     {
-        return slider.value;
+        return (int)slider.value;
     }
 }
 
