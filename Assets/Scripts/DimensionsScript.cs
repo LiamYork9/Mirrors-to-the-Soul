@@ -45,7 +45,7 @@ public class DimensionsScript : MonoBehaviour
             currentTime  += Time.deltaTime;
             barLength -= Time.deltaTime;
             timer.SetTimer(barLength);
-            mana.AddMana();
+            mana.SetMana((int)currentTime * 15);
         }
         if(currentTime >= timeToLive)
         {
