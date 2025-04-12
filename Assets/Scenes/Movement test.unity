@@ -712,8 +712,8 @@ PrefabInstance:
       value: Spell
       objectReference: {fileID: 0}
     - target: {fileID: 7506627446269457411, guid: da583020135a3594497378def1ffcf8e, type: 3}
-      propertyPath: m_TagString
-      value: Spell
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9130041912844638394, guid: da583020135a3594497378def1ffcf8e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -721,7 +721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9130041912844638394, guid: da583020135a3594497378def1ffcf8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.027155714
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 9130041912844638394, guid: da583020135a3594497378def1ffcf8e, type: 3}
       propertyPath: m_LocalPosition.z

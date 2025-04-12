@@ -130,3 +130,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dead_zone: 0
+  spellPrefab: {fileID: 7506627446269457411, guid: da583020135a3594497378def1ffcf8e, type: 3}
