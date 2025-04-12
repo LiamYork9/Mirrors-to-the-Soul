@@ -34,13 +34,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void TakeDamage(int damage)
     {
-        var collided = collision.gameObject;
-        Debug.Log("Collided");
-        if(collided.CompareTag("Boss"))
-        {
-            Destroy(gameObject);
-        }
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
     }
 }
