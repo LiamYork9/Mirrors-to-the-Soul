@@ -7,9 +7,9 @@ TagManager:
   - GetRid
   tags:
   - Spell
-  - Enemy
   - Obstacle
-  - Movable
+  - Moveable
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -120,7 +120,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Shoot"",
                     ""type"": ""Button"",
-                    ""id"": ""b55d58bb-7a3b-4830-b375-f8e320c9f153"",
+                    ""id"": ""6d138e68-26d3-4e9e-805c-95a730021a69"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -284,7 +284,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""917e7e07-d340-4a3f-8d09-c4e900f9d105"",
+                    ""id"": ""89ae9260-e915-422c-9630-385b81bd1bd7"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -295,8 +295,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""50795854-5c77-48fc-8e25-2cdf2cc3445c"",
-                    ""path"": ""<Joystick>/trigger"",
+                    ""id"": ""c574fba3-1a80-42fc-94fe-baa846fa9b32"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
