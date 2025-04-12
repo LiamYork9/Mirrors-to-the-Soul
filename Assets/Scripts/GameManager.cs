@@ -24,9 +24,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    gamepad = new PlayerControls();
-
-    gamepad.Controls.Shifting.performed += ctx => Swapped();
+   
+    
 
     }
     public void Update()
