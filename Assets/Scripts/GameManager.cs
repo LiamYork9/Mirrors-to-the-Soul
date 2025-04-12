@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     }
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.LeftShift))
         {
             if(isSwapped)
             {
