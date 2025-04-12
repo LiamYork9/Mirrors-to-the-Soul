@@ -29,9 +29,13 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.left * move_speed * input.MoveLeft.ReadValue<float>() * Time.deltaTime);
     }
 
-    void TakeDamage(int damage)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        var collided = collision.gameObject;
+        Debug.Log("Collided");
+        if(collided.CompareTag("Boss"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
