@@ -50,12 +50,16 @@ public class NewBehaviourScript : MonoBehaviour
             GameManager.Instance.isSwapped = false;
             reflected.SetActive(false);
             currentTime = 0.0f;
+            barLength = timeToLive;
         }
     }
 
     public void Inversion()
     {
         foreach(GameObject go in invertedObjects){
+            if(go == null){
+                return;
+            }
         if(GameManager.Instance.swapped == true)
         {
             go.GetComponent<SpriteRenderer>().material.SetFloat("_Threshold", Th + 1.0f);

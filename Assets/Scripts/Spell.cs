@@ -28,5 +28,9 @@ public class spell : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
