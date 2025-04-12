@@ -5,12 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - GetRid
-  tags:
   - Spell
-  - Obstacle
-  - Moveable
   - Enemy
-  - ScreenBounds
   layers:
   - Default
   - TransparentFX
