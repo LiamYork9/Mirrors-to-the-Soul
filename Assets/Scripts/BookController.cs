@@ -9,20 +9,20 @@ public class BookController : MonoBehaviour
     public float dead_zone;
     public GameObject spellPrefab;
     public Transform spawnPt;
+    private float x_movement;
+    private float y_movement;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        x_movement = 0.0f;
+        y_movement = 0.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
         var input = Game.Input.Controls;
-        float x_movement = 0.0f;
-        float y_movement = 0.0f;
-
 
         x_movement = input.AimBookX.ReadValue<float>();
         y_movement = input.AimBookY.ReadValue<float>();
