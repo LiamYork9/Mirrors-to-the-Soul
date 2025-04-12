@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        
+        rb.velocity = transform.up * speed; 
     }
 
     private void RotateTowardsTarget() {
@@ -32,7 +32,17 @@ public class Enemy : MonoBehaviour {
     }
 
     private void GetTarget() {
-        target = GameObject.FindGameObjectWithTag("Player").transform; 
+            target = GameObject.FindGameObjectWithTag("Player").transform; 
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            // Do some dmg to player 
+        } //else if (other.gameObject.CompareTag("Bullet"))   // replace w/ projectile tag
+        {
+            // Do some dmg to the enemy
+        }
     }
 
 }
