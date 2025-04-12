@@ -26,7 +26,9 @@ public class PlayerHealth : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        if(col.gameObject.CompareTag("Enemy")){
         TakeDamage(10);
+        }
     }
 
     void TakeDamage(int damage)
