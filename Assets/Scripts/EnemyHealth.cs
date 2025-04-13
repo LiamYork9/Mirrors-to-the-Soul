@@ -7,18 +7,20 @@ public class EnemyHealth : MonoBehaviour
 
     public float hp;
     public DimensionsScript dscript;
+    public AudioSource audioSrc;
 
     public TurnThatOn baller;
     // Start is called before the first frame update
     void Start()
     {
-       dscript = FindAnyObjectByType<DimensionsScript>();
-       baller = FindAnyObjectByType<TurnThatOn>();
+        dscript = FindAnyObjectByType<DimensionsScript>();
+        baller = FindAnyObjectByType<TurnThatOn>();
+        audioSrc.GetComponent<AudioSource>();
 
-       if(baller == null)
-       {
+        if(baller == null)
+        {
             return;
-       }
+        }
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if(hp <= 0)
         {
+            SoundManager.Play(SoundType.DEATH);
             Die();
         }
     }
@@ -35,6 +38,7 @@ public class EnemyHealth : MonoBehaviour
         if(col.CompareTag("Spell"))
         {
             hp -= 1.0f;
+            SoundManager.Play(SoundType.IMPACT);
         }
         
     }

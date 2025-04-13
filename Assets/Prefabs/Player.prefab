@@ -230,6 +230,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
+  audioSrc: {fileID: 0}
   death: {fileID: 0}
 --- !u!1001 &7000606208868549280
 PrefabInstance:

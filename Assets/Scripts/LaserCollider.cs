@@ -5,10 +5,13 @@ using UnityEngine;
 public class LaserCollider : MonoBehaviour
 {
     public PlayerHealth player_health;
+    public AudioSource audioSrc;
     // Start is called before the first frame update
     void Start()
     {
+        audioSrc.GetComponent<AudioSource>();
         player_health = FindAnyObjectByType<PlayerHealth>();
+        SoundManager.Play(SoundType.LASER);
     }
 
     // Update is called once per frame
@@ -21,6 +24,7 @@ public class LaserCollider : MonoBehaviour
     {
         if(col.CompareTag("Player"))
         {
+            SoundManager.Play(SoundType.LASERBULLET);
             player_health.DIE();
         }
     }

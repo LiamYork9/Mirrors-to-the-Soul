@@ -78,7 +78,7 @@ public class BookController : MonoBehaviour
                 spell.transform.position = spawnPt.position;
                 spell.transform.rotation = Quaternion.Euler(0, 0, 360 - angle);
                 shootCD = 0.5f;
-                SoundManager.Play(SoundType.SHOOT, volume: 5.0f);
+                SoundManager.Play(SoundType.SHOOT, volume: 2.0f);
                 if (GameManager.Instance.swapped == false)
                 {
                     UseMana(10);

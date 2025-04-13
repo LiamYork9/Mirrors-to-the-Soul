@@ -7,7 +7,7 @@ public enum SoundType {
     LASER,
     SWAP,
     DEATH,
-    EYEATTACK,
+    NULL,
     DAMAGETAKEN,
     DAMAGEDEALT,
     IMPACT,
@@ -66,17 +66,17 @@ public class SoundManager : MonoBehaviour {
         Instance = this;
         audioSrc = GetComponent<AudioSource>();
         sounds = new() {
-            { SoundType.SHOOT, new(new string[] {"Fire_(1), Fire_(2), Fire_(3), Fire_(4), Fire_(5), Fire_(6)"}) },
+            { SoundType.NULL, new(new string[] {"Fire_(1), Fire_(2), Fire_(3), Fire_(4), Fire_(5), Fire_(6)"}) },
             { SoundType.PROJECTILE, new(new string[] {"Projectile_(1), Projectile_(2), Projectile_(3), Projectile_(4), Projectile_(5)"}) },
             { SoundType.LASER, new(new string[] {"Laser"}) },
             { SoundType.SWAP, new(new string[] {"DimensionSwap"}) },
-            { SoundType.DEATH, new(new string[] {"PhysicalEnemyImpact"}) },
+            { SoundType.SHOOT, new(new string[] {"GunshotHeavy"}) },
             { SoundType.DAMAGETAKEN, new(new string[] {"BeenHit"}) },
             { SoundType.DAMAGEDEALT, new(new string[] {"Hit"}) },
             { SoundType.IMPACT, new(new string[] {"Impact"}) },
             { SoundType.BOSSIMPACT, new(new string[] {"Explosion"}) },
             { SoundType.FLAPPING, new(new string[] {"WingsFlapping"}) },
-            { SoundType.ENEMY, new(new string[] {"CreatureSound, AnotherCreatureSound"}) },
+            { SoundType.DEATH, new(new string[] {"CreatureSound, AnotherCreatureSound"}) },
             { SoundType.LASERBULLET, new(new string[] {"LaserBullet"}) },
         };
     }
