@@ -16,7 +16,7 @@ public class PauseGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if((Input.GetKeyDown(KeyCode.Escape)) || (Input.GetKeyDown(KeyCode.JoystickButton9)))
         {
              if (isPaused)
             {
@@ -32,7 +32,7 @@ public class PauseGame : MonoBehaviour
 
     public void Resume()
     {
-         Time.timeScale = 1f;
+        Time.timeScale = 1f;
         isPaused = false;
         pause.SetActive(false);
     }
