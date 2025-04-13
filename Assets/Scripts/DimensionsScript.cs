@@ -14,11 +14,11 @@ public class DimensionsScript : MonoBehaviour
 
     public TimerBar timer;
 
-    public ManaBar mana;
-
     public float barLength;
 
     public GameObject reflected;
+
+    public bool isSwitched;
 
     
 
@@ -45,7 +45,7 @@ public class DimensionsScript : MonoBehaviour
             currentTime  += Time.deltaTime;
             barLength -= Time.deltaTime;
             timer.SetTimer(barLength);
-            mana.SetMana((int)currentTime * 15);
+            isSwitched = true;
         }
         if(currentTime >= timeToLive)
         {

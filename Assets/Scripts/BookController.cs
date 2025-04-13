@@ -13,15 +13,18 @@ public class BookController : MonoBehaviour
     private float y_component;
     private float prev_x = 0.0f;
     private float prev_y = 0.0f;
+    private float shootCD;
     public int maxMana = 100;
     public int currentMana;
     public ManaBar manaBar;
+    public DimensionsScript getBool;
 
     // Start is called before the first frame update
     void Start()
     {
         x_component = 0.0f;
         y_component = 0.0f;
+        shootCD = 0f;
         currentMana = maxMana;
         manaBar.SetMaxMana(maxMana);
     }
@@ -30,6 +33,7 @@ public class BookController : MonoBehaviour
     void Update()
     {
         var input = Game.Input.Controls;
+        shootCD -= Time.deltaTime;
 
         x_component = input.AimBookX.ReadValue<float>();
         y_component = input.AimBookY.ReadValue<float>();
@@ -64,13 +68,25 @@ public class BookController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 360 - angle);
         }
 
-        if (input.Shoot.WasPressedThisFrame())
+        if (currentMana != 0)
         {
-            var spell = Instantiate(spellPrefab);
-            spell.transform.position = spawnPt.position;
-            spell.transform.rotation = Quaternion.Euler(0, 0, 360 - angle);
-            if(GameManager.Instance.swapped == false){
-            UseMana(10);
+            if ((input.Shoot.WasPressedThisFrame()) && (shootCD <= 0))
+            {
+                var spell = Instantiate(spellPrefab);
+                spell.transform.position = spawnPt.position;
+                spell.transform.rotation = Quaternion.Euler(0, 0, 360 - angle);
+                shootCD = 0.5f;
+                if (GameManager.Instance.swapped == false)
+                {
+                    Debug.Log("not Swapped");
+                    UseMana(10);
+                }
+            }
+            if (GameManager.Instance.swapped == true)
+            {
+                Debug.Log("Add Mana");
+                manaBar.SetMana(((int)getBool.currentTime * 10) + currentMana);
+                currentMana = manaBar.GetMana();
             }
         }
     }

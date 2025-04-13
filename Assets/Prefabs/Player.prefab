@@ -123,7 +123,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb092c2e9987d604c8dd900c6a2be641, type: 3}
   m_Color: {r: 0, g: 0.20000005, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -170,7 +170,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.2, y: 3.2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -178,10 +178,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.5, y: 0.5}
+    - - {x: 0.208482, y: 0.38263687}
+      - {x: -0.114425465, y: 0.25982487}
+      - {x: -0.28120303, y: -0.04699278}
+      - {x: -0.042341605, y: -0.46718264}
+      - {x: 0.3867042, y: -0.4366641}
+      - {x: 0.5748513, y: -0.07967943}
+      - {x: 0.71879745, y: 0.076010734}
+      - {x: 0.6479641, y: 0.19629562}
+      - {x: 0.47696877, y: 0.15453088}
   m_UseDelaunayMesh: 0
 --- !u!50 &8595926316314080079
 Rigidbody2D:
@@ -225,6 +230,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
+  death: {fileID: 0}
 --- !u!1001 &7000606208868549280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233,6 +239,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3074728257938652370}
     m_Modifications:
+    - target: {fileID: 2072634434086083725, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072634434086083725, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072634434086083725, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072634434086083725, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072634434086083725, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.501
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072634434086083725, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4889872263484737138, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -272,6 +302,26 @@ PrefabInstance:
     - target: {fileID: 4889872263484737138, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004505392263525197, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934614987514967073, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
+      propertyPath: m_Time
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934614987514967073, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934614987514967073, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
+      propertyPath: m_MinVertexDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934614987514967073, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8708289844845935391, guid: fd50712ac73d7fb42b613a224c10211d, type: 3}
       propertyPath: spawnPt
