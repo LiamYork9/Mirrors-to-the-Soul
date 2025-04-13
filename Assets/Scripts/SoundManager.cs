@@ -2,7 +2,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum SoundType {
-    FIRE,
+    SHOOT,
+    PROJECTILE,
+    LASER,
+    SWAP,
+    DEATH,
+    EYEATTACK,
+    DAMAGETAKEN,
+    DAMAGEDEALT,
+    IMPACT,
+    BOSSIMPACT,
+    FLAPPING,
+    ENEMY,
+    LASERBULLET,
+
 }
 
 public class SoundCollection {
@@ -53,7 +66,18 @@ public class SoundManager : MonoBehaviour {
         Instance = this;
         audioSrc = GetComponent<AudioSource>();
         sounds = new() {
-            { SoundType.FIRE, new(new string[] {"fire_(1),fire_(2),fire_(3),fire_(4),fire_(5),fire_(6),"}) },
+            { SoundType.SHOOT, new(new string[] {"Fire_(1), Fire_(2), Fire_(3), Fire_(4), Fire_(5), Fire_(6)"}) },
+            { SoundType.PROJECTILE, new(new string[] {"Projectile_(1), Projectile_(2), Projectile_(3), Projectile_(4), Projectile_(5)"}) },
+            { SoundType.LASER, new(new string[] {"Laser"}) },
+            { SoundType.SWAP, new(new string[] {"DimensionSwap"}) },
+            { SoundType.DEATH, new(new string[] {"PhysicalEnemyImpact"}) },
+            { SoundType.DAMAGETAKEN, new(new string[] {"BeenHit"}) },
+            { SoundType.DAMAGEDEALT, new(new string[] {"Hit"}) },
+            { SoundType.IMPACT, new(new string[] {"Impact"}) },
+            { SoundType.BOSSIMPACT, new(new string[] {"Explosion"}) },
+            { SoundType.FLAPPING, new(new string[] {"WingsFlapping"}) },
+            { SoundType.ENEMY, new(new string[] {"CreatureSound, AnotherCreatureSound"}) },
+            { SoundType.LASERBULLET, new(new string[] {"LaserBullet"}) },
         };
     }
 
