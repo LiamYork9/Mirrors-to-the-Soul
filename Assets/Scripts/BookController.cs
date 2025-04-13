@@ -18,10 +18,12 @@ public class BookController : MonoBehaviour
     public int currentMana;
     public ManaBar manaBar;
     public DimensionsScript getBool;
+    public AudioSource audioSrc;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSrc.GetComponent<AudioSource>();
         x_component = 0.0f;
         y_component = 0.0f;
         shootCD = 0f;
@@ -76,17 +78,23 @@ public class BookController : MonoBehaviour
                 spell.transform.position = spawnPt.position;
                 spell.transform.rotation = Quaternion.Euler(0, 0, 360 - angle);
                 shootCD = 0.5f;
+                SoundManager.Play(SoundType.SHOOT, volume: 2.0f);
                 if (GameManager.Instance.swapped == false)
                 {
-                    Debug.Log("not Swapped");
                     UseMana(10);
                 }
             }
             if (GameManager.Instance.swapped == true)
             {
-                Debug.Log("Add Mana");
-                manaBar.SetMana(((int)getBool.currentTime * 10) + currentMana);
+                manaBar.SetMana(((int)getBool.currentTime) + currentMana);
                 currentMana = manaBar.GetMana();
+            }
+        }
+        else
+        {
+            if (GameManager.Instance.swapped == true)
+            {
+                currentMana += 1;
             }
         }
     }

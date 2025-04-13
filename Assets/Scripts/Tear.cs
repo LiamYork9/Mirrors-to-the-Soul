@@ -16,13 +16,17 @@ public class Tear : MonoBehaviour
 
     public float currentTime;
 
+    public AudioSource audioSrc;
+
     void Start()
     {
+        audioSrc.GetComponent<AudioSource>();
         pHealth = FindAnyObjectByType<PlayerHealth>();
         rb2d = GetComponent<Rigidbody2D>();
         invers = FindAnyObjectByType<DimensionsScript>();
         invers.invertedObjects.Add(gameObject);
         Destroy(gameObject, lifeTime);
+        SoundManager.Play(SoundType.PROJECTILE);
     }
 
     void FixedUpdate()

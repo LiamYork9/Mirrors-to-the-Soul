@@ -21,6 +21,7 @@ public class DeathScreen : MonoBehaviour
     {
         GameManager.Instance.swapped = false;
         GameManager.Instance.isSwapped = false;
+         GameManager.Instance.doNOtShift = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -36,6 +37,7 @@ public class DeathScreen : MonoBehaviour
 
     public void Quit()
     {
+        GameManager.Instance.doNOtShift = false;
         Time.timeScale = 1.0f;
          SceneManager.LoadScene(gameSceneName);
     }

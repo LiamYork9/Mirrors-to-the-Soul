@@ -9,11 +9,15 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
+    public AudioSource audioSrc;
+
+    
 
     public DeathScreen death;
     // Start is called before the first frame update
     void Start()
     {
+        audioSrc.GetComponent<AudioSource>();
         death = FindAnyObjectByType<DeathScreen>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -41,12 +45,14 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        SoundManager.Play(SoundType.DAMAGETAKEN);
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
 
     public void DIE()
     {
+        GameManager.Instance.doNOtShift = true;
         death.TurnOn();
         Destroy(gameObject);
     }
