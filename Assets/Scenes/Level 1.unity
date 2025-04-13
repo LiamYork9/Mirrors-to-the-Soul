@@ -582,6 +582,7 @@ MonoBehaviour:
   swapped: 0
   isSwapped: 0
   audioSrc: {fileID: 3972474778679841368}
+  doNOtShift: 0
 --- !u!4 &163831441
 Transform:
   m_ObjectHideFlags: 0
@@ -2894,7 +2895,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6714588346544187773, guid: 63b7f565f87ad9849ae994b5e93e465c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -4045,7 +4047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 5
   dscript: {fileID: 0}
-  audioSrc: {fileID: 0}
+  audioSrc: {fileID: 3972474778679841368}
   baller: {fileID: 0}
 --- !u!1 &2079920398
 GameObject:
