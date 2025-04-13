@@ -449,7 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 1689284285}
   quitButton: {fileID: 1441762883}
-  gameSceneName: Level 1
+  gameSceneName: Level 4
 --- !u!1 &641735947
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,6 +817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swapped: 0
   isSwapped: 0
+  doNOtShift: 0
 --- !u!4 &1033032561
 Transform:
   m_ObjectHideFlags: 0
