@@ -32,7 +32,7 @@ public class MainMenu : MonoBehaviour
     void StartGame()
     {
         GameManager.Instance.swapped = false;
-         GameManager.Instance.isSwapped = false;
+        GameManager.Instance.isSwapped = false;
         SceneManager.LoadScene(gameSceneName);
     }
 

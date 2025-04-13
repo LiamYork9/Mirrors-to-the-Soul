@@ -12,22 +12,37 @@ public class Tear : MonoBehaviour
 
     public PlayerHealth pHealth;
 
+    public DimensionsScript invers;
+
+    public float currentTime;
+
     void Start()
     {
         pHealth = FindAnyObjectByType<PlayerHealth>();
         rb2d = GetComponent<Rigidbody2D>();
+        invers = FindAnyObjectByType<DimensionsScript>();
+        invers.invertedObjects.Add(gameObject);
         Destroy(gameObject, lifeTime);
     }
 
     void FixedUpdate()
     {
+        currentTime += Time.fixedDeltaTime;
+
         rb2d.velocity = transform.up * speed;
+
+        if(currentTime >= 2.0f)
+        {
+            invers.invertedObjects.Remove(gameObject);
+        }
     }
 
      void OnCollisionEnter2D(Collision2D col)
      {
+        
          if(col.gameObject.CompareTag("Player"))
          {
+            invers.invertedObjects.Remove(gameObject);
             Destroy(gameObject);
          }
 
