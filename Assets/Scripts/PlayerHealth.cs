@@ -32,6 +32,9 @@ public class PlayerHealth : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.CompareTag("Enemy")){
+        TakeDamage(5);
+        }
+        if(col.gameObject.CompareTag("Ranged") && GameManager.Instance.swapped == false){
         TakeDamage(10);
         }
     }
