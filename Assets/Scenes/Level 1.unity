@@ -841,9 +841,9 @@ MonoBehaviour:
   timeToLive: 5
   Th: 0
   timer: {fileID: 727728373}
-  mana: {fileID: 421197922}
   barLength: 0
   reflected: {fileID: 727728371}
+  isSwitched: 0
 --- !u!4 &472951276
 Transform:
   m_ObjectHideFlags: 0
@@ -1255,10 +1255,6 @@ PrefabInstance:
     - target: {fileID: 5143576455680735686, guid: 71214bbb37e771149b2342979727f90f, type: 3}
       propertyPath: m_Name
       value: HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 5249823913860215596, guid: 71214bbb37e771149b2342979727f90f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5530530581059446330, guid: 71214bbb37e771149b2342979727f90f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2316,6 +2312,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1872698341208357311, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
+      propertyPath: getBool
+      value: 
+      objectReference: {fileID: 472951275}
     - target: {fileID: 1872698341208357311, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
       propertyPath: manaBar
       value: 

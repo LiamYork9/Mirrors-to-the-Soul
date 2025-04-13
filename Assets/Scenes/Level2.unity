@@ -961,6 +961,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1872698341208357311, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
+      propertyPath: getBool
+      value: 
+      objectReference: {fileID: 1505646801}
+    - target: {fileID: 1872698341208357311, guid: d7041a3b2b6adfa48ae4f8fce23bea1d, type: 3}
       propertyPath: manaBar
       value: 
       objectReference: {fileID: 1648031408}
@@ -2236,9 +2240,9 @@ MonoBehaviour:
   timeToLive: 5
   Th: 0
   timer: {fileID: 1270743472}
-  mana: {fileID: 1648031408}
   barLength: 0
   reflected: {fileID: 1270743470}
+  isSwitched: 0
 --- !u!4 &1505646802
 Transform:
   m_ObjectHideFlags: 0
