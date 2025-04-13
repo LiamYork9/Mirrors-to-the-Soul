@@ -10,8 +10,11 @@ public class Tear : MonoBehaviour
     [SerializeField] private float lifeTime = 3f;
     private Rigidbody2D rb2d;
 
+    public PlayerHealth pHealth;
+
     void Start()
     {
+        pHealth = FindAnyObjectByType<PlayerHealth>();
         rb2d = GetComponent<Rigidbody2D>();
         Destroy(gameObject, lifeTime);
     }
@@ -20,4 +23,14 @@ public class Tear : MonoBehaviour
     {
         rb2d.velocity = transform.up * speed;
     }
+
+     void OnCollisionEnter2D(Collision2D col)
+     {
+         if(col.gameObject.CompareTag("Player"))
+         {
+            Destroy(gameObject);
+         }
+
+     }
+    
 }

@@ -68,8 +68,11 @@ public class BookController : MonoBehaviour
         {
             var spell = Instantiate(spellPrefab);
             spell.transform.position = spawnPt.position;
+            
             spell.transform.rotation = Quaternion.Euler(0, 0, 360 - angle);
+            if(GameManager.Instance.swapped == false){
             UseMana(10);
+            }
         }
     }
 

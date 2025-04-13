@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 53d99d299716a66459fbecd85a012daf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -163,3 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dead_zone: 0
   spellPrefab: {fileID: 7506627446269457411, guid: da583020135a3594497378def1ffcf8e, type: 3}
+  spawnPt: {fileID: 0}
+  maxMana: 100
+  currentMana: 0
+  manaBar: {fileID: 0}

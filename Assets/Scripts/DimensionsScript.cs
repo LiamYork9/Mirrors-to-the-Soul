@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class DimensionsScript : MonoBehaviour
 {
     public List<GameObject> invertedObjects;
 
@@ -45,7 +45,7 @@ public class NewBehaviourScript : MonoBehaviour
             currentTime  += Time.deltaTime;
             barLength -= Time.deltaTime;
             timer.SetTimer(barLength);
-            mana.AddMana();
+            mana.SetMana((int)currentTime * 15);
         }
         if(currentTime >= timeToLive)
         {
@@ -73,9 +73,12 @@ public class NewBehaviourScript : MonoBehaviour
         {
             go.GetComponent<SpriteRenderer>().material.SetFloat("_Threshold", Th + 1.0f);
        
-            if (go.CompareTag("GetRid"))
+            if (go.CompareTag("GetRid") || go.CompareTag("Enemy"))
             {
                 go.GetComponent<BoxCollider2D>().enabled = false;
+            }
+            if(go == null){
+                return;
             }
         }
         else
@@ -83,9 +86,12 @@ public class NewBehaviourScript : MonoBehaviour
             go.GetComponent<SpriteRenderer>().material.SetFloat("_Threshold", Th = 0.0f);
             currentTime = 0.0f;
 
-             if (go.CompareTag("GetRid"))
+             if (go.CompareTag("GetRid")|| go.CompareTag("Enemy"))
             {
                  go.GetComponent<BoxCollider2D>().enabled = true;
+            }
+            if(go == null){
+                return;
             }
         }
         }

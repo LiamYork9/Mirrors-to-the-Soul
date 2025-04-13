@@ -18,9 +18,9 @@ public class ManaBar : MonoBehaviour
         slider.value = mana;
     }
 
-    public void AddMana()
+    public int GetMana()
     {
-        SetMana((int)slider.value + 20);
+        return (int)slider.value;
     }
 }
 
