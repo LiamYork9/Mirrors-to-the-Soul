@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerHealth : MonoBehaviour
 {
 
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
+
+    public DeathScreen death;
     // Start is called before the first frame update
     void Start()
     {
+        death = FindAnyObjectByType<DeathScreen>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        death.TurnOff();
     }
 
     // Update is called once per frame
@@ -39,6 +44,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void DIE()
     {
+        
+        death.TurnOn();
         Destroy(gameObject);
     }
 }

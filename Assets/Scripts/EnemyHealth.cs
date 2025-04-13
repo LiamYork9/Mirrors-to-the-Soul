@@ -6,10 +6,11 @@ public class EnemyHealth : MonoBehaviour
 {
 
     public float hp;
+    public DimensionsScript dscript;
     // Start is called before the first frame update
     void Start()
     {
-        
+       dscript = FindAnyObjectByType<DimensionsScript>();
     }
 
     // Update is called once per frame
@@ -32,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void Die()
     {
+        dscript.invertedObjects.Remove(gameObject);
         Destroy(gameObject);
     }
 }
