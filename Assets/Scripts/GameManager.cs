@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public bool isSwapped = false;
 
+    public bool doNOtShift = false;
+
     PlayerControls gamepad;
     public static GameManager Instance { get; private set; } = null;
     private void Awake()
@@ -32,7 +34,11 @@ public class GameManager : MonoBehaviour
     {
         if((Input.GetKeyDown(KeyCode.LeftShift)) || (Input.GetKeyDown(KeyCode.JoystickButton4)))
         {
-            Swap();
+            if(GameManager.Instance.doNOtShift == false)
+            {
+                Swap();
+            }
+            
         }
        
     }

@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public HealthBar healthBar;
 
+    
+
     public DeathScreen death;
     // Start is called before the first frame update
     void Start()
@@ -47,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void DIE()
     {
-        
+        GameManager.Instance.doNOtShift = true;
         death.TurnOn();
         Destroy(gameObject);
     }
