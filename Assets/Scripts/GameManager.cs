@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public bool isSwapped = false;
 
     public AudioSource audioSrc;
+    public bool doNOtShift = false;
 
     PlayerControls gamepad;
     public static GameManager Instance { get; private set; } = null;
@@ -33,8 +34,12 @@ public class GameManager : MonoBehaviour
     {
         if((Input.GetKeyDown(KeyCode.LeftShift)) || (Input.GetKeyDown(KeyCode.JoystickButton4)))
         {
-            SoundManager.Play(SoundType.SWAP);
-            Swap();
+            if(GameManager.Instance.doNOtShift == false)
+            {
+                SoundManager.Play(SoundType.SWAP);
+                Swap();
+            }
+            
         }
        
     }
