@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 288460667192736587}
   m_Layer: 0
   m_Name: Tear
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,3 +163,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   lifeTime: 3
+  pHealth: {fileID: 0}
