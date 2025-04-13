@@ -47,7 +47,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void DIE()
     {
-        
         death.TurnOn();
         Destroy(gameObject);
     }
