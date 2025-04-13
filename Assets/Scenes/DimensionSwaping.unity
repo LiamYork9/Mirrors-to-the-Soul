@@ -457,6 +457,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6073720193056624427, guid: 6128d118ec788854d83ea52171521a68, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.2083334
+      objectReference: {fileID: 0}
+    - target: {fileID: 6073720193056624427, guid: 6128d118ec788854d83ea52171521a68, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.125
+      objectReference: {fileID: 0}
     - target: {fileID: 6876463653425935500, guid: 6128d118ec788854d83ea52171521a68, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.78
@@ -641,6 +649,10 @@ PrefabInstance:
     - target: {fileID: 7428732131705265580, guid: 63b7f565f87ad9849ae994b5e93e465c, type: 3}
       propertyPath: m_Name
       value: EnemyMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428732131705265580, guid: 63b7f565f87ad9849ae994b5e93e465c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7428732131705265580, guid: 63b7f565f87ad9849ae994b5e93e465c, type: 3}
       propertyPath: m_TagString

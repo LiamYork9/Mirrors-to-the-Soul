@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class SceneTransition : MonoBehaviour
+public class LaserCollider : MonoBehaviour
 {
-    public string scene_name;
+    public PlayerHealth player_health;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player_health = FindAnyObjectByType<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -22,7 +21,7 @@ public class SceneTransition : MonoBehaviour
     {
         if(col.CompareTag("Player"))
         {
-            SceneManager.LoadScene(scene_name);
+            player_health.DIE();
         }
     }
 }

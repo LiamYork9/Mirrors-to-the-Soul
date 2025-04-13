@@ -43,6 +43,11 @@ public class Enemy : MonoBehaviour {
         {
             // Do some dmg to the enemy
         }
+        if (other.gameObject.CompareTag("Barrier"))
+        {
+            print("Hit a wall");
+            speed = 0 - speed;
+        }
     }
 
 }

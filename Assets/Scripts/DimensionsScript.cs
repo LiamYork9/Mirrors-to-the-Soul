@@ -73,7 +73,7 @@ public class DimensionsScript : MonoBehaviour
         {
             go.GetComponent<SpriteRenderer>().material.SetFloat("_Threshold", Th + 1.0f);
        
-            if (go.CompareTag("GetRid"))
+            if (go.CompareTag("GetRid") || go.CompareTag("Enemy"))
             {
                 go.GetComponent<BoxCollider2D>().enabled = false;
             }
@@ -86,7 +86,7 @@ public class DimensionsScript : MonoBehaviour
             go.GetComponent<SpriteRenderer>().material.SetFloat("_Threshold", Th = 0.0f);
             currentTime = 0.0f;
 
-             if (go.CompareTag("GetRid"))
+             if (go.CompareTag("GetRid")|| go.CompareTag("Enemy"))
             {
                  go.GetComponent<BoxCollider2D>().enabled = true;
             }
