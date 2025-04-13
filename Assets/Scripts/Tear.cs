@@ -26,7 +26,7 @@ public class Tear : MonoBehaviour
         invers = FindAnyObjectByType<DimensionsScript>();
         invers.invertedObjects.Add(gameObject);
         Destroy(gameObject, lifeTime);
-        SoundManager.Play(SoundType.PROJECTILE);
+        SoundManager.Play(SoundType.PROJECTILE, volume: 0.7f);
     }
 
     void FixedUpdate()
