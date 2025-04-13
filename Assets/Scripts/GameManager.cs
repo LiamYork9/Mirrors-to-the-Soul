@@ -11,10 +11,13 @@ public class GameManager : MonoBehaviour
 
     public bool isSwapped = false;
 
+    public AudioSource audioSrc;
+
     PlayerControls gamepad;
     public static GameManager Instance { get; private set; } = null;
     private void Awake()
     {
+        audioSrc = GetComponent<AudioSource>();
         if (Instance == null)
         {
             Instance = this;
@@ -24,14 +27,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-   
-    
-
     }
+
     public void Update()
     {
         if((Input.GetKeyDown(KeyCode.LeftShift)) || (Input.GetKeyDown(KeyCode.JoystickButton4)))
         {
+            SoundManager.Play(SoundType.SWAP);
             Swap();
         }
        
