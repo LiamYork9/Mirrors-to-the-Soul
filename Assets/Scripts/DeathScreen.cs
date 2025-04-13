@@ -19,6 +19,8 @@ public class DeathScreen : MonoBehaviour
 
     public void Retry()
     {
+        GameManager.Instance.swapped = false;
+        GameManager.Instance.isSwapped = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
